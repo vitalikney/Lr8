@@ -1,0 +1,46 @@
+<h1>Страница с полученным результатом</h1>
+
+<hr>
+  <p>
+    Палиндром - число, которое читается одинаково 
+    как справа налево, так и слева направо.
+  </p>
+<hr>
+
+<div id="container">
+    <div id="left">
+      <table>
+      <thead>
+        <tr>
+          <th>Номер</th>
+          <th>Число</th>
+          <th>Квадрат числа</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @count = 0 %>
+        <% @result.each do |x, quad| %>
+        <% @count += 1 %>
+          <tr>
+            <td><%= "#{@count}" %></td>
+            <td><%= "#{x}" %></td>
+            <td><%= "#{quad}" %></td>
+          </tr>
+        <% end %>
+      </tbody> 
+    </table>
+    </div>
+    <div id="res">
+      <table>
+        <tr>
+          <th>Количество чисел: </th>
+          <td><%= "#{@count}" %></td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <a href = "/">Повторить ввод<a>
+        </tr>
+      </table>
+    </div>
+</div>
